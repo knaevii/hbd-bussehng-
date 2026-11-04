@@ -1,22 +1,17 @@
-# 📱 Karina Tuazon's Phone
+# 📱 hackir k cguroh ng phone!
 
-Take a peek at Karina Tuazon's phone.
+hi po i gib u permission n silipin ang phone cu heheheheh
 
-Story: https://www.asianfanfics.com/story/view/1709711/ang-pagsubok-ni-karina
+Password: `1111`
 
-Password: `0411`
+### oh pano b to gumaganah
+- swipe mo pataas to unlock the phone ok
+- enter mo passcode ok
+- pindutin mo lang ang apps ok
 
-### How to open
-- Swipe up to unlock the phone.
-- Enter the passcode to access the home screen.
-- Tap the apps to explore.
+### available apps
+- 📝 notes
+- 📸 photos 
+- 🎧 spotify
 
-### Available apps
-- 📝 Notes
-- 📸 Photos 
-- 📷 Instagram
-- 📞 Phone
-- 💬 Messages
-- 🎧 Spotify
-
-Enjoy your little peek ♡
+hapi birthday, busseng! ♡
