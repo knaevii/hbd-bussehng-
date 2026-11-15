@@ -450,7 +450,7 @@ const PHOTO_LIST = [
   { src: "photos_phone/IMG_2441.jpg", date: "2026-09-15" },
   { src: "photos_phone/FF78CD3B-9785-4069-B844-586E0837DE91.jpg", date: "2026-04-22" },
   { src: "photos_phone/att.l_943y_qwHTPvOd_lSICTqGPA-IDQYr3eA1LHykFesU.jpg", date: "2025-12-14" },
-  { src: "photos_phone/SDC11196.jpg", date: "2026-09-02" },
+  { src: "photos_phone/IMG_4465.jpeg", date: "2026-09-02" },
 ];
 let photos = PHOTO_LIST.map((p, i) => ({ id: i + 1, s: p.src, t: p.date ? +new Date(p.date + "T12:00") : Date.now() - (PHOTO_LIST.length - i) * 864e5 })), pv = "a";
 function shrink(f, cb) { const r = new FileReader(); r.onload = () => { const i = new Image(); i.onload = () => { const k = Math.min(1, 700 / Math.max(i.width, i.height)), c = document.createElement("canvas"); c.width = i.width * k; c.height = i.height * k; c.getContext("2d").drawImage(i, 0, 0, c.width, c.height); cb(c.toDataURL("image/jpeg", .72)); }; i.src = r.result; }; r.readAsDataURL(f); }
