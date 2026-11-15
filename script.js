@@ -214,7 +214,7 @@ const SEED = [
   { t: dAgo(5, 12, 0), x: "**copy pasta**\n\n\n☆BASTA POST NI IDOL Like👍 KOYAN.!!☆SANA LAGI KANG ACTIVE AH...para my#LiKe👍 KANA my#COMMENT KAPA..💖💖💖BASTA WAGKAKALIMUTAN MAG #Like👍_BACK aHh Sino dito#ACTIVE_LiKER👍 & #ACTIVE_COMMENTOR???# PM_muko para#ADD kita.#CF_TO_CF TAU.!!Like👍(BOY & GIRL)#ACCEPTED...✅✅✅\n\noh eaN.. OnLinE ka .. onLinE aqu .. ayw mu cu kauzapiN... kc naka onLinE reN ciA ganyaN ka nmn Eh. ! kakauxapiN mu LnG aqu .. paG.. d ciA naka onLinE .. pag naka onLinE xiA .. uaLa na... baLewaLa ncu seu ...:((\n\nHuy, 💫🚺 oo ikaw. 🖐💃 amishu. 😿😔😭 oh, di 🚫❌ mo ko miss❗️❓❔ gara 🔷💫 mo naman.✊👺 kamusta ka na? 👀🙈🙀bat nakasimangot 😞😕😟 ka? hindi 🚫bagay sayo. ✖️✖️ ngumiti ka nga. 😬☺😄 tumingin ka saken. 🙈👀 tumingin ka. 👀💀titigan mo ko (2x) 👁👄👁\n\nhindi man ako kasing cute ng ex mo😉❤🙊at hindi man ako kasing lupit ng crush mo😘😍✌ hindi man ako kasing tindi ng pinapangarap mo😊😧💋pero pag ako minahal mo ng totoo😯😉💖mamahalin kita hangang mag yelo ang impyerno💕😘at baka kiligin pati ang demonyo❤💖😈\n\nwalang signal sa bukid pero noong nalaman kong nag-post ka eh dali-dali akong tumakbo sa pilapil.Tumawid ako ng tatlong ilog.Tinumbok ko ang pitong bundok at umutang ng pamasahe papuntang syudad namalimos pa ako para may pang hulog sa piso net para lang makareact sa post mo\n\nUEE😭🥺 💧 Eu 💧 💧 E E😭🥺😭UUUUE😭🥺 💧 🥺😭🥺💧 ue 🥺e e e😭. e 💧 🥺 Uueuue. 💧 💧 ue 😭🥺 eee eUEE 💧🥺💧 EEE 💧 💧😭EE H 💧 🥺😭E EUU 💧 🥺😭 💧😭EUEH🥺😭💧💧eu eeeeeee💧 💧 💧 uu🥺😭 hhuUEEE🥺😭 💧 uuuue. 💧 😭ueeeeee 💧🥺😭\n\nhi poide b t4u mag uzap..? edi wag, haha sensya ns ha gnito lng kc aq ih, walng kwenta, sna hinde n lng aqu nbohai. xori kung nde m aqu pde kauzapin kc i2 lg aqu. i’m just a simple person kc, lowkey… i’m a nobody… wla ngkakagus2 mkipag uzap s taong 2lad qu e.\n\njuzzku ...ano i2ng pingpupost niu!!! juzko dming bata d2 s fb....mkkita nla yn ,,, hayz kwawa mga mgolang niu,,..yn b tinuro sainyu za skol..... pg nkita yn ng mga bata gagaya yn,,,.sna bago mgpost pg izipan mona..!!!" },
   { t: dAgo(3, 11, 11), x: "**i mis u**\n\n\npaminta\nasin\nfemale dog diaper - small\nsunsilk na green\nbioderm na blue\nsand bath ni pip\nglade lavender\nyakult dalawang set" }
 ];
-let notes = store.get("notes3", null) || SEED.map((n, i) => ({ id: i + 1, ...n }));
+let notes = SEED.map((n, i) => ({ id: i + 1, ...n }));
 let nid = null;
 const DD = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function fdate(t) { const d = new Date(t), a = Math.floor((new Date().setHours(0, 0, 0, 0) - new Date(t).setHours(0, 0, 0, 0)) / 864e5); return a === 1 ? "Yesterday" : a < 1 ? p2(d.getHours()) + ":" + p2(d.getMinutes()) : a < 7 ? DD[d.getDay()] : p2(d.getDate()) + "/" + p2(d.getMonth() + 1) + "/" + d.getFullYear(); }
@@ -240,9 +240,9 @@ $("#nnew").onclick = () => { nid = Math.max(0, ...notes.map(n => n.id)) + 1; not
 $("#ntxt").oninput = () => { const n = notes.find(n => n.id === nid); if (n) {
   n.x = $("#ntxt").value;
   n.t = Date.now();
-  store.set("notes3", notes);
+  // store.set("notes3", notes);
 } };
-function nclose() { $("#ned").classList.remove("on"); notes = notes.filter(n => n.x.trim()); store.set("notes3", notes); rnotes(); }
+function nclose() { $("#ned").classList.remove("on"); notes = notes.filter(n => n.x.trim()); rnotes(); }
 $("#nback").onclick = nclose;
 $("#ndel").onclick = () => { notes = notes.filter(n => n.id !== nid); $("#ntxt").value = ""; nclose(); };
 rnotes();
