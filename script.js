@@ -187,10 +187,10 @@ $$("[data-close]").forEach(b => b.onclick = closeApp);
 // Locket: static display only
 const locket = $("#locket");
 const profile = $("#lpp");
-locket.style.backgroundImage = "url('photos_phone/IMG_4458.jpeg')";
+locket.style.backgroundImage = "url('photos_phone/IMG_4464.jpeg')";
 locket.style.backgroundSize = "cover";
 locket.style.backgroundPosition = "center";
-profile.style.backgroundImage = "url('photos_phone/IMG_4458.jpeg')";
+profile.style.backgroundImage = "url('photos_phone/IMG_4464.jpeg')";
 profile.style.backgroundSize = "cover";
 profile.style.backgroundPosition = "center";
 profile.style.backgroundRepeat = "no-repeat";
